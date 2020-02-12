@@ -1,22 +1,40 @@
 {
-  "name": "template-babel-demo",
+  "name": "node-shuffle",
   "version": "0.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development BABEL_ENV=NODE babel-node ./index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "compile": "rm -rf dist && babel src -d dist"
   },
   "keywords": [],
   "author": "jinzhan",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.4.4",
     "@babel/core": "^7.7.4",
     "@babel/node": "^7.7.4",
-    "@babel/plugin-transform-modules-commonjs": "^7.7.4",
-    "@babel/preset-env": "^7.7.4",
     "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/plugin-proposal-decorators": "^7.7.4",
+    "@babel/plugin-transform-modules-commonjs": "^7.7.4",
     "@babel/plugin-transform-new-target": "^7.7.4",
-    "cross-env": "^6.0.3"
-  }
+    "@babel/preset-env": "^7.4.5",
+    "babel-plugin-add-module-exports": "^1.0.2",
+    "babel-preset-minify": "^0.5.0",
+    "coveralls": "^2.11.9",
+    "cross-env": "^6.0.3",
+    "eslint": "^2.7.0",
+    "expect": "^1.20.1",
+    "jest": "^25.1.0",
+    "mocha": "^2.4.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jinzhan/node-shuffle.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jinzhan/node-shuffle/issues"
+  },
+  "homepage": "https://github.com/jinzhan/node-shuffle#readme"
 }
